@@ -1,0 +1,44 @@
+<html>
+    {% extends 'base.html' %}
+    {% load rest_framework %}
+    {% load crispy_forms_tags %}
+    {% block content %}
+        <div class="jumbotron">
+            <h1 class="display-5">Welcome to Sadguru's Amrit-Tulya</h1>
+            <p class="lead">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="font-weight-bold">New product</span> &middot;
+                        </div>
+                        <div class="card-body">
+                            <span class="text-muted">
+                                <form action="{% url 'product-post' %}" method="POST">
+                                    {% csrf_token %}
+                                    {% render_form serializer %}
+                                    {{ form| crispy }}
+                                    <br>
+                                   <span><button class="btn btn-success ml-2" type="submit">Save</button></span> 
+                                </form>
+                            </span>                           
+                        </div>
+                    </div>
+                    <br />
+            </p>
+        </div>
+        {% endblock content %}
+</html>
+
+<!--
+{% load rest_framework %}
+<html><body>
+
+    <h1>Product - {{ product.name }}</h1>
+    
+    <form action="{% url 'product-post' %}" method="POST">
+        {% csrf_token %}
+        {% render_form serializer %}
+        <input type="submit" value="Save">
+    </form>
+    
+    </body></html>
+    -->

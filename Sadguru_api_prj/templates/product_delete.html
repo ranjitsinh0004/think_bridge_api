@@ -1,0 +1,23 @@
+<html>
+    {% extends 'base.html' %}
+    {% load rest_framework %}
+    {% block content %}
+        <h1>Delete</h1>
+        <form action="" method="post">{% csrf_token %}
+            <p>Are you sure you want to delete <b>"{{ product.name }}"</b>?</p>
+            <button class="btn btn-danger ml-2" type="submit">Confirm</button>
+        </form>
+    {% endblock content %}
+</html>
+
+
+<!--<html>
+        <h1>Delete</h1>
+        <form action="" method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ product.name }}"?</p>
+            <button class="btn btn-danger ml-2" type="submit">Confirm</button>
+        </form>
+   
+</html>-->
+
+

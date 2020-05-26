@@ -1,0 +1,42 @@
+<html>
+    {% extends 'base.html' %}
+    {% load rest_framework %}
+
+    {% block content %}
+        <div class="jumbotron">
+            <h1 class="display-5">Welcome to Sadguru's Amrit-Tulya</h1>
+            <p class="lead">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="font-weight-bold">{{ product.name }}</span> &middot;
+                            <span class="text-muted">Rs. {{ product.price }} </span>
+                        </div>
+                        <div class="card-body">
+                            <span class="font-weight-bold">Description:-</span> 
+                            <span class="text-muted">{{ product.description }} </span>
+                            
+                            <br>
+                           
+                        </div>
+                    </div>
+                    <br />
+            </p>
+        </div>
+        {% endblock content %}
+</html>
+
+<!--
+{% load rest_framework %}
+<html><body>
+
+    <h1>Product - {{ product.name }}</h1>
+    
+    <form action="{% url 'product-detail' pk=product.pk %}" method="POST">
+        {% csrf_token %}
+        {% render_form serializer %}
+        <input type="submit" value="Save">
+    </form>
+    
+    </body></html>
+    -->
+
