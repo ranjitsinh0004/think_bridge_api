@@ -28,6 +28,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = ['127.0.0.1', 'localhost','testserver']
+#Added allowed hosts i.e testserver for api testing
 ALLOWED_HOSTS = [ '127.0.0.1', 'localhost', 'testserver', ]
 #ALLOWED_HOSTS=('testserver',)
 
@@ -133,7 +134,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-
+##settings for rest_framework testing
 REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json',
     'TEST_REQUEST_RENDERER_CLASSES': [

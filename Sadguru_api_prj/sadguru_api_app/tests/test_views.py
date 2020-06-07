@@ -15,7 +15,7 @@ def test_get_productlist():
 from django.urls import include, path, reverse
 from rest_framework.test import APITestCase, URLPatternsTestCase
 from sadguru_api_app import views
-from sadguru_api_app.views import ProductDetail,ProductPost
+from sadguru_api_app.views import ProductDetail,ProductPost,ProductDelete
 from rest_framework.test import APIRequestFactory
 
 """URLPatternsTestCase,ProductList,ProductPost"""
@@ -44,4 +44,3 @@ class ProductTests(APITestCase, URLPatternsTestCase):
         view = ProductPost.as_view()
         request = factory.get('/detailapi/9')
         response = view(request)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
