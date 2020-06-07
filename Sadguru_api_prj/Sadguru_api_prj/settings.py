@@ -26,7 +26,10 @@ SECRET_KEY = 'd)6355928a&)p@ct!64v%d86x7nfi##ik!%!gwuztw7xuy0d_s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['127.0.0.1', 'localhost','testserver']
+ALLOWED_HOSTS = [ '127.0.0.1', 'localhost', 'testserver', ]
+#ALLOWED_HOSTS=('testserver',)
 
 
 # Application definition
@@ -128,3 +131,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
+    'TEST_REQUEST_RENDERER_CLASSES': [
+        'rest_framework.renderers.MultiPartRenderer',
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.TemplateHTMLRenderer'
+    ]
+}

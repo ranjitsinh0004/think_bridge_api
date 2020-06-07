@@ -4,5 +4,5 @@ from .models import Product
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display=["id","name","description","price" ]
+    list_display=["id","choice","name","description","price" ]
 admin.site.register(Product,ProductAdmin)
