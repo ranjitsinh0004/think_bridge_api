@@ -27,5 +27,5 @@
 
 
 ### How to run testcases?
-1. to run all the testcases in the `test` folder add following command into the terminal
+1. to run all the testcases in the `tests` folder add following command into the terminal
         `python manage.py test`
