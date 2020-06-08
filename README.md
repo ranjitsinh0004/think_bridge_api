@@ -2,7 +2,7 @@
 1. For the frontend `HTML,CSS,BOOTSTRAP,jquery script` have been used.
 2. For the backend `Django Rest Framework` is used.
 3. `Pipenv` is used as a packaging tool.
-4. testcases for views and model are written
+4. testcases for views,models,urls are written
 5. API tesing is done with `POSTMAN`
 6. Generated requirements.txt using `pipenv lock -r > requirements.txt`
 
@@ -24,3 +24,8 @@
         `http://127.0.0.1:8000/admin/`
         `username:admin`
         `password:admin`
+
+
+### How to run testcases?
+1. to run all the testcases in the `test` folder add following command into the terminal
+        `python manage.py test`
