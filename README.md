@@ -29,3 +29,8 @@
 ### How to run testcases?
 1. to run all the testcases in the `tests` folder add following command into the terminal
         `python manage.py test`
+
+### Tracking
+1. frontend functionality: 2 days
+2. backend functionality: 3 days
+3. Testcases/testing: 1-2 days
